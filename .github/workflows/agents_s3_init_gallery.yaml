@@ -55,6 +55,11 @@ jobs:
         with:
           name: agents-artifact
           path: bin/publisher/agents
+      - uses: listendev/action@v0.12
+        with: 
+          jwt: ${{ secrets.LSACTIONS }}
+          ci: only
+
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
